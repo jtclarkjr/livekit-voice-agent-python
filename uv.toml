@@ -1,0 +1,5 @@
+# Keep local and container dependency behavior aligned with the former Bun setup.
+required-version = ">=0.11.28,<0.12"
+exclude-newer = "7 days"
+no-build = true
+index-strategy = "first-index"

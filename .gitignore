@@ -1,0 +1,27 @@
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.ruff_cache/
+.ty_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+
+# Local credentials and deployment bindings
+.env*
+!.env.example
+livekit.toml
+
+# Local tooling and operating-system files
+graphify-out/
+*.log
+.DS_Store
