@@ -222,12 +222,12 @@ lk agent config --id {ID} .
 
 Use `lk agent create` only when intentionally creating a different agent.
 
-Run the quality gate before deploying to the current `ap-south` region:
+Run the quality gate before deploying to the current `us-west` region:
 
 ```console
 uv sync --locked
 uv run poe check
-lk agent deploy --region ap-south --yes .
+lk agent deploy --region us-west --yes .
 ```
 
 The deployment reuses secrets stored on the LiveKit Cloud agent. Do not put
