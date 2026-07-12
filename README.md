@@ -220,7 +220,6 @@ lk cloud auth
 lk agent config --id {ID} .
 ```
 
-This binds the directory to `realtime-chat-voice` in the `tessuract` project.
 Use `lk agent create` only when intentionally creating a different agent.
 
 Run the quality gate before deploying to the current `ap-south` region:
