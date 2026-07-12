@@ -7,7 +7,7 @@ not used.
 
 ## Runtime behavior
 
-- Loads up to ten existing personal-chat messages from `elixir-api` before
+- Loads up to ten existing personal-chat messages from `api` before
   joining the room.
 - Before each model call, builds an inference-only window containing the ten
   most recent user/assistant messages, the current turn's sanitized tool
@@ -23,7 +23,7 @@ not used.
   (`f31cc6a7-c1e8-4764-980c-60a361443dd1`).
 - Uses LiveKit's audio turn detector, preemptive generation, and Quail Voice
   Focus noise cancellation. Parallel model tool calls are disabled.
-- Persists committed user and assistant items to `elixir-api` in order through
+- Persists committed user and assistant items to `api` in order through
   one job-scoped `httpx.AsyncClient` and a single-consumer `asyncio.Queue`.
   Stable LiveKit item IDs and session-local sequence numbers make retries
   idempotent.
@@ -44,7 +44,7 @@ connect the worker, and only then mark the backend session started.
 
 Typed in-call messages use LiveKit's session transport and enter the same
 committed history as speech. This repository never records or stores audio and
-never sends audio to `elixir-api`.
+never sends audio to `api`.
 
 ## Web-search policy and privacy
 
@@ -58,7 +58,7 @@ Otherwise the model can search only when it is genuinely uncertain.
 Search crosses the LiveKit zero-retention boundary: the minimum necessary query
 is sent to Tavily. Provider metadata, URLs, and unsafe fields are stripped; only
 sanitized snippets may reach inference memory. Queries, snippets, tool calls,
-tool outputs, source names, and URLs are never persisted to `elixir-api` and are
+tool outputs, source names, and URLs are never persisted to `api` and are
 discarded with the in-memory session. Only final user and assistant turns enter
 the durable transcript. Responses do not expose source names, citations, or
 URLs.
