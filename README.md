@@ -201,8 +201,8 @@ bytecode, downloads LiveKit plugin assets during the build, excludes development
 dependencies, and runs as an unprivileged user.
 
 ```console
-docker build -t realtime-chat-voice-python .
-docker run --rm --env-file .env.local realtime-chat-voice-python
+docker build -t livekit-voice-agent .
+docker run --rm --env-file .env.local livekit-voice-agent
 ```
 
 `no-build = true` is enforced inside the image. A missing compatible wheel must
