@@ -91,7 +91,7 @@ Copy `.env.example` to `.env.local` and provide the required server-side values:
 | --- | --- |
 | `LIVEKIT_URL` | LiveKit Cloud WebSocket URL. |
 | `LIVEKIT_API_KEY` / `LIVEKIT_API_SECRET` | Server-side LiveKit credentials and Inference authorization. |
-| `LIVEKIT_AGENT_NAME` | Must remain `realtime-chat-voice` to match explicit dispatch. |
+| `LIVEKIT_AGENT_NAME` | Must remain same as livekit to match explicit dispatch. |
 | `API_URL` | Root backend API URL, for example `http://localhost:4000`. |
 | `VOICE_AGENT_BRIDGE_TOKEN` | Shared Bearer secret for internal voice endpoints. |
 | `TAVILY_API_KEY` | Server-side Tavily credential for transient web search. |
