@@ -217,7 +217,7 @@ local binding for the existing production agent:
 
 ```console
 lk cloud auth
-lk agent config --id CA_Hu9ubkUdwRoL .
+lk agent config --id {ID} .
 ```
 
 This binds the directory to `realtime-chat-voice` in the `tessuract` project.
